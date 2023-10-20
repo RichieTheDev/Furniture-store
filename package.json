@@ -12,6 +12,8 @@
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.18.0",
     "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide": "^4.1.4",
+    "eslint-config-next": "^13.5.6",
     "next": "latest",
     "next-sanity": "^5.5.8",
     "react": "latest",
@@ -26,8 +28,7 @@
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
-    "eslint": "latest",
-    "eslint-config-next": "latest",
+    "eslint": "^8.51.0",
     "postcss": "latest",
     "tailwindcss": "latest",
     "typescript": "latest"
