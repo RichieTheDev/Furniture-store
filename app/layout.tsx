@@ -4,7 +4,7 @@ import { Nunito_Sans } from "next/font/google";
 import Navbar from "./components/Navbar";
 
 const lexend = Nunito_Sans({
-  weight: ["500", "600", "700"],
+  weight: ["500", "600", "700", "900"],
   subsets: ["latin"],
 });
 

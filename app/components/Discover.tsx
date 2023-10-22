@@ -20,7 +20,7 @@ const Discover = async () => {
 
   return (
     <>
-      <div className=" h-full sm:h-[90vh]">
+      <div className=" h-full ">
         <div className="sm:w-[45%] pl-4 pt-8 sm:pl-8 lg:pl-12 sm:pt-24 lg:pt-28 sm:float-left">
           <h1 className="sm:text-4xl text-3xl  font-bold ">
             Discover Our
@@ -80,7 +80,7 @@ const Discover = async () => {
           May Be of Interest
         </h1>
         <br />
-        <p className="pt-1 sm:pt-3 font-semibold">
+        <p className="pt-1 font-semibold">
           Exclusive Italian-made products for the comfort
           <br />
           and coziness of your daily life
@@ -88,31 +88,31 @@ const Discover = async () => {
       </div>
 
       <div className="pt-3 sm:pt-6 px-4 sm:px-10 ">
-        <div className="sm:float-left sm:w-1/2  " key={poster[4]._id}>
+        <div className="sm:float-left sm:w-[50%]  " key={poster[4]._id}>
           <Image
             src={poster[4].poster}
-            width={350}
-            height={350}
+            width={270}
+            height={270}
             alt="img"
-            className="sm:h-[90%] h-[50%] object-cover flex justify-center mx-auto sm:flex-none sm:justify-normal sm:mx-0  rounded-md"
+            className="sm:h-[85%]  object-cover flex justify-center mx-auto sm:flex-none sm:justify-normal sm:mx-0  rounded-md"
           />
 
-          <p className="font-semibold flex justify-start sm:flex-none sm:justify-normal sm:mx-0">
+          <p className="font-semibold flex justify-center  sm:flex-none sm:justify-normal sm:mx-0">
             {poster[4].name}
           </p>
-          <p className="text-sm font-bold flex justify-start sm:flex-none sm:justify-normal sm:mx-0">
+          <p className="text-sm font-bold flex justify-center sm:flex-none sm:justify-normal sm:mx-0">
             ${poster[4].price}
           </p>
         </div>
-        <div className="px-4 sm:px-6 flex pt-4 sm:pt-0 gap-2 ">
+        <div className="px-4 sm:px-6 flex pt-4 sm:pt-0 gap-4 ">
           {poster.slice(5, 7).map((item) => (
-            <div className="sm:float-right  sm:w-1/2" key={item._id}>
+            <div className="sm:float-right  sm:w-[50%]" key={item._id}>
               <Image
                 src={item.poster}
                 width={250}
                 height={250}
                 alt="img"
-                className="h-[70%] object-cover rounded-md"
+                className="h-[70%]  object-cover rounded-md"
               />
               <p className="font-semibold truncate">{item.name}</p>
               <p className="text-sm font-bold">${item.price}</p>
@@ -130,14 +130,14 @@ const Discover = async () => {
             alt="img"
             className="h-[70%] object-cover flex justify-center mx-auto sm:flex-none sm:justify-normal sm:mx-0  rounded-md"
           />
-          <p className="font-semibold flex justify-start  sm:flex-none sm:justify-normal  ">
+          <p className="font-semibold flex justify-center sm:flex-none sm:justify-normal sm:mx-0 ">
             {poster[8].name}
           </p>
-          <p className="text-sm font-bold flex justify-start  sm:flex-none sm:justify-normal  ">
+          <p className="text-sm font-bold flex justify-center sm:flex-none sm:justify-normal sm:mx-0 ">
             ${poster[8].price}
           </p>
         </div>
-        <div className="px-4 flex gap-2 pt-4 sm:pt-0">
+        <div className="px-4 flex gap-4 pt-4 sm:pt-0">
           {poster.slice(9, 11).map((item) => (
             <div className="sm:float-left sm:w-[70%]" key={item._id}>
               <Image
@@ -154,7 +154,7 @@ const Discover = async () => {
         </div>
       </div>
 
-      <div className="px-6 flex  gap-2  ">
+      <div className="sm:pl-14 px-4 flex  gap-4  ">
         {poster.slice(0, 2).map((item) => (
           <div className="" key={item._id}>
             <Image
