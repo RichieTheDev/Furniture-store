@@ -74,7 +74,7 @@ const Discover = async () => {
       </div>
 
       <div className="sm:px-6 px-4 lg:px-10 flex sm:justify-end sm:text-right flex-col sm:ml-auto  w-full">
-        <h1 className="sm:text-3xl text-3xl lg:text-6xl font-bold">
+        <h1 className=" text-3xl lg:text-6xl font-bold">
           Products That
           <br />
           May Be of Interest
