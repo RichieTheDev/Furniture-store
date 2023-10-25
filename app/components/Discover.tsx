@@ -88,13 +88,19 @@ const Discover = async () => {
       </div>
 
       <div className="pt-3 sm:pt-6 px-4 sm:px-10 ">
-        <div className="sm:float-left sm:w-[50%]  " key={poster[4]._id}>
+        <div className="sm:float-left sm:w-[50%]" key={poster[4]._id}>
           <Image
             src={poster[4].poster}
-            width={270}
-            height={270}
+            sizes="100vw"
+            style={{
+              width: "67%",
+              height: "auto",
+              objectFit: "cover",
+            }}
+            width={300}
+            height={300}
             alt="img"
-            className="sm:h-[85%]  object-cover flex justify-center mx-auto sm:flex-none sm:justify-normal sm:mx-0  rounded-md"
+            className="flex flex-grow justify-center mx-auto sm:flex-none sm:justify-normal sm:mx-0  rounded-md"
           />
 
           <p className="font-semibold flex justify-center  sm:flex-none sm:justify-normal sm:mx-0">
@@ -127,8 +133,14 @@ const Discover = async () => {
             src={poster[8].poster}
             width={300}
             height={300}
+            sizes="100vw"
+            style={{
+              width: "67%",
+              height: "auto",
+              objectFit: "cover",
+            }}
             alt="img"
-            className="h-[70%] object-cover flex justify-center mx-auto sm:flex-none sm:justify-normal sm:mx-0  rounded-md"
+            className=" flex justify-center mx-auto sm:flex-none sm:justify-normal sm:mx-0  rounded-md"
           />
           <p className="font-semibold flex justify-center sm:flex-none sm:justify-normal sm:mx-0 ">
             {poster[8].name}

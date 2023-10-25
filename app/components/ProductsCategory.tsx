@@ -9,31 +9,24 @@ interface img {
 const ProductsCategory = async () => {
   return (
     <div className="px-4 sm:px-8 pt-4">
-      <h1 className="text-3xl pl-4 pt-2 lg:pl-10 font-bold lg:text-6xl">
-        Products
-        <h1 className="flex  items-baseline">
-          Categories{" "}
-          <span className="hidden sm:flex flex-col justify-center mx-auto font-semibold text-base">
-            Exquisite furniture design <br />
-            -for your comfort
-          </span>
-        </h1>
+      <h1 className="text-3xl pl-4 pt-2 sm:pl-8 lg:pl-12 font-bold sm:text-4xl">
+        Products Categories{" "}
       </h1>
-      <p className="pl-4 pt-2 flex sm:hidden flex-col justify-center mx-auto font-semibold items-baseline text-base">
+      <p className="pl-4 sm:pl-8 lg:pl-12 pt-2 font-semibold  text-xl">
         Exquisite furniture design <br />
         -for your comfort
       </p>
 
-      <div className="flex flex-col  sm:flex-row sm:justify-between lg:mx-28 md:mx-10 sm:pt-10 pt-4">
+      <div className="flex flex-col  sm:flex-row sm:justify-between lg:mx-28 md:mx-8 sm:pt-10 pt-4">
         <div className="relative">
           <Image
             src="/img8.jpg"
             alt="img8"
             width={250}
             height={250}
-            className="h-60 w-[76vw] sm:w-[36vw] lg:w-full sm:h-[65%]  object-cover rounded-lg "
+            className="h-60 w-[76vw] sm:w-[36vw] lg:w-full sm:h-[90%]  object-cover rounded-lg "
           />
-          <p className=" backdrop-blur-2xl bg-white/30 absolute bottom-10 right-4  sm:bottom-44 lg:bottom-60 sm:-right-14 p-8 sm:p-10 flex flex-col items-center font-bold">
+          <p className=" backdrop-blur-2xl bg-white/30 absolute bottom-10 right-4  sm:bottom-44 lg:bottom-36 sm:-right-14 p-8 sm:p-10 flex flex-col items-center font-bold">
             <span>Chairs</span>
             <span className=" underline underline-offset-4">View</span>
           </p>
@@ -44,9 +37,9 @@ const ProductsCategory = async () => {
             alt="img9"
             width={250}
             height={250}
-            className="h-60 w-[76vw] sm:w-[36vw] lg:w-full sm:h-[65%]  object-cover rounded-lg "
+            className="h-60 w-[76vw] sm:w-[36vw] lg:w-full sm:h-[90%]  object-cover rounded-lg "
           />
-          <p className=" backdrop-blur-2xl bg-white/30 absolute bottom-10 right-4  sm:bottom-44 lg:bottom-60 sm:-right-14 p-8 sm:p-10 flex flex-col items-center font-bold">
+          <p className=" backdrop-blur-2xl bg-white/30 absolute bottom-10 right-4  sm:bottom-44 lg:bottom-36 sm:-right-14 p-8 sm:p-10 flex flex-col items-center font-bold">
             <span>Sofas</span>
             <span className=" underline underline-offset-4">View</span>
           </p>
@@ -86,7 +79,7 @@ const ProductsCategory = async () => {
             width={300}
             height={350}
             alt="img"
-            className="h-full object-cover rounded-md"
+            className="h-[50vh] lg:h-[65vh] sm:w-[38vw] lg:w-[40vw] object-cover rounded-md"
           />
         </div>
       </div>

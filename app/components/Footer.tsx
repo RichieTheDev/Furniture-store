@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row  sm:justify-between items-baseline mt-6">
           <div className="flex flex-col">
             <h1 className="text-2xl sm:text-4xl font-bold">Hikli</h1>
-            <p className="text-xl sm:text-2xl font-semibold">
+            <p className="text-lg sm:text-2xl font-semibold">
               We have provided clients around the world
               <br />
               with solutions for a diverse range of design
@@ -29,18 +29,18 @@ const Footer = () => {
               requirements{" "}
             </p>
           </div>
-          <div className="flex mx-auto flex-col space-y-4 items-baseline text-xl font-semibold">
+          <div className="flex mx-auto flex-col space-y-4 items-baseline text-lg font-semibold">
             <p>Home</p>
             <p>Products</p>
             <p>Lookbook</p>
             <p>About Us</p>
             <p>Contact</p>
           </div>
-          <div className="hidden sm:flex mx-auto  flex-col space-y-4 items-baseline text-xl  font-semibold">
+          <div className="hidden sm:flex mx-auto  flex-col space-y-4 items-baseline text-lg  font-semibold">
             <p>Subscribe</p>
             <p>Support</p>
           </div>
-          <div className="hidden lg:flex  mx-auto  flex-col space-y-4 items-baseline text-xl  font-semibold">
+          <div className="hidden lg:flex  mx-auto  flex-col space-y-4 items-baseline text-lg  font-semibold">
             <p>Twitter</p>
             <p>Instagram</p>
           </div>
