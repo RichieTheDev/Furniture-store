@@ -27,7 +27,7 @@ const Navbar = () => {
       {nav && (
         <ul
           onClick={handleClick}
-          className="fixed left-0 top-0 w-full z-10 h-full text-white bg-black font-medium items-center text-center ease-in-out duration-500"
+          className="fixed left-0 top-0 w-full z-10 h-screen text-white bg-black font-medium items-center text-center ease-in-out duration-500 overflow-hidden"
         >
           {/* Close Button */}
           <AiOutlineClose

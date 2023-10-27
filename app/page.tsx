@@ -10,7 +10,6 @@ const format = () => {
       <Suspense fallback={<p>Loading feed...</p>}>
         <Discover />
       </Suspense>
-
       <ProductsCategory />
     </div>
   );

@@ -6,6 +6,7 @@ import { groq } from "next-sanity";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
+// Define the furniture interface
 interface Furn {
   _id: string;
   name: string;
@@ -13,27 +14,32 @@ interface Furn {
   price: number;
 }
 
+// Create the Discover component
 const Discover = async () => {
-  const poster = await client.fetch<Furn[]>(
+  // Fetch furniture data from the Sanity CMS
+  const furnitureData = await client.fetch<Furn[]>(
     groq`*[_type=='furniture']{_id,name,price, "poster": poster.asset->url}`,
   );
 
   return (
     <>
-      <div className=" h-full ">
+      {/* Featured Products Section */}
+      <div className="h-full">
+        {/* Left content */}
         <div className="sm:w-[45%] pl-4 pt-8 sm:pl-8 lg:pl-12 sm:pt-24 lg:pt-28 sm:float-left">
-          <h1 className="sm:text-4xl text-3xl  font-bold ">
+          <h1 className="sm:text-4xl text-3xl font-bold">
             Discover Our
             <br />
             Featured Products
           </h1>
-          <p className="sm:text-base  lg:text-lg pt-4 font-bold">
+          <p className="sm:text-base lg:text-lg pt-4 font-bold">
             Hliki furniture combines comfort and refines
             <br />
             design with the most innovative technologies
           </p>
         </div>
 
+        {/* Splide (Slider) component */}
         <Splide
           options={{
             pagination: false,
@@ -55,26 +61,28 @@ const Discover = async () => {
               },
             },
           }}
-          className="sm:w-[55%] w-screen px-4 sm:px-0 sm:float-right sm:pt-10 pt-4 lg:pt-20  "
+          className="sm:w-[55%] w-screen px-4 sm:px-0 sm:float-right sm:pt-10 pt-4 lg:pt-20"
         >
-          {poster.slice(0, 3).map((item) => (
+          {/* Map over furniture data and create SplideSlide components */}
+          {furnitureData.slice(0, 3).map((item) => (
             <SplideSlide key={item._id}>
               <Image
                 src={item.poster}
                 alt={item.name}
                 width={300}
                 height={300}
-                className="object-cover h-[70%] rounded-lg"
+                className="h-[70%] object-cover rounded-lg"
               />
               <p className="font-semibold truncate">{item.name}</p>
-              <p className="text-sm font-bold ">${item.price}</p>
+              <p className="text-sm font-bold">${item.price}</p>
             </SplideSlide>
           ))}
         </Splide>
       </div>
 
-      <div className="sm:px-6 px-4 lg:px-10 flex sm:justify-end sm:text-right flex-col sm:ml-auto  w-full">
-        <h1 className=" text-3xl lg:text-6xl font-bold">
+      {/* Products That May Be of Interest Section */}
+      <div className="sm:px-6 px-4 lg:px-10 flex sm:justify-end sm:text-right flex-col sm:ml-auto w-full">
+        <h1 className="text-3xl lg:text-5xl font-bold">
           Products That
           <br />
           May Be of Interest
@@ -87,99 +95,46 @@ const Discover = async () => {
         </p>
       </div>
 
-      <div className="pt-3 sm:pt-6 px-4 sm:px-10 ">
-        <div className="sm:float-left sm:w-[50%]" key={poster[4]._id}>
+      {/* Display additional furniture items */}
+      <div className="pt-3 sm:pt-6 px-4 sm:px-10">
+        <div
+          className="sm:float-left relative mx-auto  w-[60vw]  sm:w-1/2"
+          key={furnitureData[4]._id}
+        >
+          {/* Display the fifth furniture item */}
           <Image
-            src={poster[4].poster}
+            src={furnitureData[4].poster}
             sizes="100vw"
-            style={{
-              width: "67%",
-              height: "auto",
-              objectFit: "cover",
-            }}
-            width={300}
+            width={350}
             height={300}
             alt="img"
-            className="flex flex-grow justify-center mx-auto sm:flex-none sm:justify-normal sm:mx-0  rounded-md"
+            className="object-cover flex justify-center mx-auto sm:flex-none sm:justify-normal sm:mx-0 rounded-md"
           />
 
-          <p className="font-semibold flex justify-center  sm:flex-none sm:justify-normal sm:mx-0">
-            {poster[4].name}
+          <p className="font-semibold flex justify-center sm:flex-none sm:justify-normal sm:mx-0">
+            {furnitureData[4].name}
           </p>
           <p className="text-sm font-bold flex justify-center sm:flex-none sm:justify-normal sm:mx-0">
-            ${poster[4].price}
+            ${furnitureData[4].price}
           </p>
         </div>
-        <div className="px-4 sm:px-6 flex pt-4 sm:pt-0 gap-4 ">
-          {poster.slice(5, 7).map((item) => (
-            <div className="sm:float-right  sm:w-[50%]" key={item._id}>
+        <div className="flex pt-4 sm:pt-0 gap-4">
+          {/* Map over and display the next two furniture items */}
+          {furnitureData.slice(5, 7).map((item) => (
+            <div className="sm:float-right relative" key={item._id}>
               <Image
                 src={item.poster}
                 width={250}
                 height={250}
+                sizes="100vw"
                 alt="img"
-                className="h-[70%]  object-cover rounded-md"
+                className=" object-cover rounded-md"
               />
               <p className="font-semibold truncate">{item.name}</p>
               <p className="text-sm font-bold">${item.price}</p>
             </div>
           ))}
         </div>
-      </div>
-
-      <div className="pt-3 sm:pt-6 px-4 sm:px-10 clear-both">
-        <div className="sm:float-right sm:w-[30%]" key={poster[8]._id}>
-          <Image
-            src={poster[8].poster}
-            width={300}
-            height={300}
-            sizes="100vw"
-            style={{
-              width: "67%",
-              height: "auto",
-              objectFit: "cover",
-            }}
-            alt="img"
-            className=" flex justify-center mx-auto sm:flex-none sm:justify-normal sm:mx-0  rounded-md"
-          />
-          <p className="font-semibold flex justify-center sm:flex-none sm:justify-normal sm:mx-0 ">
-            {poster[8].name}
-          </p>
-          <p className="text-sm font-bold flex justify-center sm:flex-none sm:justify-normal sm:mx-0 ">
-            ${poster[8].price}
-          </p>
-        </div>
-        <div className="px-4 flex gap-4 pt-4 sm:pt-0">
-          {poster.slice(9, 11).map((item) => (
-            <div className="sm:float-left sm:w-[70%]" key={item._id}>
-              <Image
-                src={item.poster}
-                width={250}
-                height={250}
-                alt="img"
-                className="h-[70%] object-cover rounded-md"
-              />
-              <p className="font-semibold truncate">{item.name}</p>
-              <p className="text-sm font-bold">${item.price}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="sm:pl-14 px-4 flex  gap-4  ">
-        {poster.slice(0, 2).map((item) => (
-          <div className="" key={item._id}>
-            <Image
-              src={item.poster}
-              width={250}
-              height={250}
-              alt="img"
-              className="h-[70%]  object-cover rounded-md"
-            />
-            <p className="font-semibold truncate">{item.name}</p>
-            <p className="text-sm font-bold">${item.price}</p>
-          </div>
-        ))}
       </div>
     </>
   );
