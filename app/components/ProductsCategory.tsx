@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface img {
   src: string;
@@ -17,9 +18,9 @@ const ProductsCategory = async () => {
             and home-objects. Our belief is that quality design <br />
             informs a quality of life.
           </p>
-          <button className=" font-semibold pt-6 underline underline-offset-4">
+          <Link href="/About" className=" font-semibold pt-6 underline underline-offset-4">
             About Us
-          </button>
+          </Link>
           <div className="pt-4 flex gap-4">
             <Image
               src="/img16.jpg"

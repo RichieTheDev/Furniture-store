@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
-import Navbar from "./components/Navbar";
+
 import Footer from "./components/Footer";
 
 const lexend = Nunito_Sans({
@@ -21,7 +21,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* <Navbar/> */}
       <body className={lexend.className}>{children}</body>
       <Footer />
     </html>

@@ -1,12 +1,11 @@
 import { Suspense } from "react";
 import Discover from "./components/Discover";
-import Navbar from "./components/Navbar";
 import ProductsCategory from "./components/ProductsCategory";
+import Hero from "./components/Hero";
 const format = () => {
   return (
     <div>
-      <Navbar />
-
+      <Hero />
       <Suspense fallback={<p>Loading feed...</p>}>
         <Discover />
       </Suspense>
