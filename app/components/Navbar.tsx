@@ -60,7 +60,7 @@ const Navbar = () => {
                 <Link href="/cart">Lookbook</Link>
               </li>
               <li className="hover:text-amber-600 text-lg p-4">
-                <Link href="/About">About Us</Link>
+                <Link href="/about">about Us</Link>
               </li>
               <li className="hover:text-amber-600 text-lg p-4">
                 <Link href="/cart">Contact</Link>

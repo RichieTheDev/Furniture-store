@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -30,10 +31,10 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex mx-auto flex-col space-y-4 items-baseline text-lg font-semibold">
-            <p>Home</p>
-            <p>Products</p>
+            <Link href="/">Home</Link>
+            <Link href="/products">Products</Link>
             <p>Lookbook</p>
-            <p>About Us</p>
+            <Link href="/about">About Us</Link>
             <p>Contact</p>
           </div>
           <div className="hidden sm:flex mx-auto  flex-col space-y-4 items-baseline text-lg  font-semibold">
