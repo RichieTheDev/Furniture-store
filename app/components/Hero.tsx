@@ -10,7 +10,7 @@ const Hero = () => {
     setNav(!nav);
   };
   return (
-    <div className="pt-1 px-3 sm:pt-4 sm:px-12 bg-hero bg-cover bg-center h-full w-full lg:h-[95vh] pb-4 text-black">
+    <div className="pt-1 px-3 sm:pt-4 sm:px-12 bg-hero bg-cover bg-center h-full w-full pb-4 text-black">
       <div className="flex items-center font-bold">
         <div className="flex justify-start space-x-3">
           <button onClick={handleClick}>
@@ -53,7 +53,7 @@ const Hero = () => {
                 <Link href="/">Home</Link>
               </li>
               <li className="hover:text-amber-600 text-lg p-4">
-                <Link href="/Products">Products</Link>
+                <Link href="/products">Products</Link>
               </li>
               <li className="hover:text-amber-600 text-lg p-4">
                 <Link href="/cart">Lookbook</Link>
@@ -87,9 +87,9 @@ const Hero = () => {
           See our thoughtfully curated collection of Furniture, lighting, and
           Objects
         </p>
-        <button className=" font-bold px-4 py-2 mt-8 border rounded-md bg-teal-600 text-teal-50 text-xl">
+        <Link href='/products' className="inline-block font-bold px-4 py-2 mt-8 border rounded-md bg-teal-600 text-teal-50 text-xl">
           View Collection
-        </button>
+        </Link>
         <p className=" font-bold pt-6 sm:absolute sm:mb-10  sm:mr-14 sm:-bottom-12 sm:right-0  text-base">
           Functional, practical interior solutions
           <br /> that make life simple and beautiful

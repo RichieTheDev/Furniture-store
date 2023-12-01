@@ -11,7 +11,7 @@ const Navbar = () => {
     setNav(!nav);
   };
   return (
-    <div className="pt-1 px-3 sm:pt-4 sm:px-12 pb-4 text-black">
+    <div className="pt-1 px-3 sm:pt-4 sm:px-12 pb-4">
       <div className="flex items-center font-bold">
         <div className="flex justify-start space-x-3">
           <button onClick={handleClick}>
@@ -54,7 +54,7 @@ const Navbar = () => {
                 <Link href="/">Home</Link>
               </li>
               <li className="hover:text-amber-600 text-lg p-4">
-                <Link href="/Products">Products</Link>
+                <Link href="/products">Products</Link>
               </li>
               <li className="hover:text-amber-600 text-lg p-4">
                 <Link href="/cart">Lookbook</Link>

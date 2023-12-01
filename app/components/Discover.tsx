@@ -82,13 +82,13 @@ const Discover = async () => {
 
       {/* Products That May Be of Interest Section */}
       <div className="sm:px-6 px-4 lg:px-10 flex sm:justify-end sm:text-right flex-col sm:ml-auto w-full">
-        <h1 className="text-3xl lg:text-5xl font-bold">
+        <h1 className="h1header">
           Products That
           <br />
           May Be of Interest
         </h1>
         <br />
-        <p className="pt-1 font-semibold">
+        <p className="font-semibold">
           Exclusive Italian-made products for the comfort
           <br />
           and coziness of your daily life
@@ -96,42 +96,41 @@ const Discover = async () => {
       </div>
 
       {/* Display additional furniture items */}
-      <div className="pt-3 sm:pt-6 px-4 sm:px-10">
+      <div className="pt-4 px-4 sm:px-10">
         <div
-          className="sm:float-left relative mx-auto  w-[60vw]  sm:w-1/2"
+          className="sm:float-left "
           key={furnitureData[4]._id}
         >
           {/* Display the fifth furniture item */}
           <Image
             src={furnitureData[4].poster}
-            sizes="100vw"
+           
             width={350}
             height={300}
             alt="img"
-            className="object-cover flex justify-center mx-auto sm:flex-none sm:justify-normal sm:mx-0 rounded-md"
+            className=" object-cover rounded-lg w-screen h-[30vh] sm:w-[35vw] sm:h-[35vh] lg:w-[45vw] lg:h-[50vh] xl:h-[75vh] xl:w-[40vw]"
           />
 
-          <p className="font-semibold flex justify-center sm:flex-none sm:justify-normal sm:mx-0">
+          <p className="flexname">
             {furnitureData[4].name}
           </p>
-          <p className="text-sm font-bold flex justify-center sm:flex-none sm:justify-normal sm:mx-0">
+          <p className="flexprice">
             ${furnitureData[4].price}
           </p>
         </div>
-        <div className="flex pt-4 sm:pt-0 gap-4">
+        <div className="flex sm:pl-6 lg:pl-11 xl:pl-12 ml-auto pt-4 sm:pt-0 gap-4 mx-auto">
           {/* Map over and display the next two furniture items */}
           {furnitureData.slice(5, 7).map((item) => (
-            <div className="sm:float-right relative" key={item._id}>
+            <div className="sm:float-right " key={item._id}>
               <Image
                 src={item.poster}
                 width={250}
-                height={250}
-                sizes="100vw"
+                height={250}                
                 alt="img"
-                className=" object-cover rounded-md"
+                className="object-cover rounded-lg h-[65%] sm:h-[85%] xl:w-[45vw] xl:h-[60vh] "
               />
-              <p className="font-semibold truncate">{item.name}</p>
-              <p className="text-sm font-bold">${item.price}</p>
+              <p className="flexname">{item.name}</p>
+              <p className="flexprice">${item.price}</p>
             </div>
           ))}
         </div>

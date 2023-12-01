@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
       <div className="sm:px-12 px-4 pt-6 sm:text-right clear-both">
-        <h1 className="text-3xl lg:text-5xl font-bold">
+        <h1 className="h1header">
           Subscribe To Our
           <br />
           NewsLetter
@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="px-4 sm:px-8">
         <div className="flex flex-col sm:flex-row  sm:justify-between items-baseline mt-6">
           <div className="flex flex-col">
-            <h1 className="text-2xl sm:text-4xl font-bold">Hikli</h1>
+            <h1 className="h1header">Hikli</h1>
             <p className="text-lg sm:text-2xl font-semibold">
               We have provided clients around the world
               <br />

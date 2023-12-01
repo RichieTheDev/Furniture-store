@@ -1,18 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-interface img {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-}
+
 const ProductsCategory = async () => {
   return (
-    <div className="overflow-clip  clear-both px-4 sm:px-8 pt-4">
+    <div className="overflow-clip  clear-both px-4 sm:px-8 sm:pt-4">
       <div>
-        <div className="mt-6 sm:float-left sm:w-1/2 ">
-          <h1 className="text-4xl lg:text-6xl font-bold">Our Story</h1>
+        <div className="sm:mt-6 sm:float-left sm:w-1/2 ">
+          <h1 className="h1header">Our Story</h1>
           <p className="text-xl font-semibold pt-4">
             Hikli presents a range of designed furniture, lighting <br />
             and home-objects. Our belief is that quality design <br />
@@ -27,14 +22,14 @@ const ProductsCategory = async () => {
               width={150}
               height={150}
               alt="img"
-              className="h-52 w-full sm:w-[24vw] lg:w-full sm:h-[45%]  object-cover rounded-md"
+              className="smallimage"
             />
             <Image
               src="/img12.jpg"
               width={150}
               height={150}
               alt="img"
-              className="h-52 w-full sm:w-[24vw] lg:w-full sm:h-[45%]  object-cover rounded-md"
+              className="smallimage"
             />
           </div>
         </div>
@@ -44,11 +39,11 @@ const ProductsCategory = async () => {
             width={300}
             height={350}
             alt="img"
-            className="h-[50vh] lg:h-[65vh] sm:w-[38vw] lg:w-[40vw] object-cover rounded-md"
+            className="bigimage"
           />
         </div>
       </div>
-      <h1 className="clear-both text-4xl pt-8 sm:pt-14 font-bold sm:text-5xl">
+      <h1 className="clear-both h1header pt-8 sm:pt-14">
         Products Categories{" "}
       </h1>
       <p className="pt-2 font-semibold  sm:text-xl text-lg">
@@ -63,12 +58,12 @@ const ProductsCategory = async () => {
             alt="img8"
             width={250}
             height={250}
-            className="h-60 w-[76vw] sm:w-[36vw] lg:w-full sm:h-[95%]  object-cover rounded-lg "
+            className="menupic "
           />
-          <p className=" backdrop-blur-2xl bg-white/30 absolute bottom-10 right-4  sm:bottom-20 lg:bottom-36 sm:-right-14 p-8 sm:p-10 flex flex-col items-center font-bold">
-            <span>Chairs</span>
+          <Link href='/products/table' className=" menu">
+            <span>Table</span>
             <span className=" underline underline-offset-4">View</span>
-          </p>
+          </Link>
         </div>
         <div className="relative mt-6 sm:mt-0">
           <Image
@@ -76,12 +71,12 @@ const ProductsCategory = async () => {
             alt="img9"
             width={250}
             height={250}
-            className="h-60 w-[76vw] sm:w-[36vw] lg:w-full sm:h-[95%]  object-cover rounded-lg "
+            className="menupic "
           />
-          <p className=" backdrop-blur-2xl bg-white/30 absolute bottom-10 right-4  sm:bottom-20 lg:bottom-36 sm:-right-14 p-8 sm:p-10 flex flex-col items-center font-bold">
-            <span>Sofas</span>
+          <Link href='/products/lamp' className=" menu">
+            <span>Lamps</span>
             <span className=" underline underline-offset-4">View</span>
-          </p>
+          </Link>
         </div>
         <div className="relative mt-6 sm:mt-0">
           <Image
@@ -89,9 +84,9 @@ const ProductsCategory = async () => {
             alt="img9"
             width={250}
             height={250}
-            className="h-60 w-[76vw] sm:w-[36vw] lg:w-full sm:h-[95%]  object-cover rounded-lg "
+            className="menupic "
           />
-          <p className=" backdrop-blur-2xl bg-white/30 absolute bottom-10 right-4  sm:bottom-20 lg:bottom-36 sm:-right-14 p-8 sm:p-10 flex flex-col items-center font-bold">
+          <p className=" menu">
             <span>Beds</span>
             <span className=" underline underline-offset-4">View</span>
           </p>
