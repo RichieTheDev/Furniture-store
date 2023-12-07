@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 
 import Footer from "./components/Footer";
+import { Suspense } from "react";
+import Navbar from "./components/Navbar";
 
 const lexend = Nunito_Sans({
   weight: ["500", "600", "700", "900"],
@@ -21,8 +23,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={lexend.className}>{children}</body>
-      <Footer />
+      <body className={lexend.className}>
+
+        {children}
+        <Suspense fallback={<p>Loading feed...</p>}>
+        <Footer />
+      </Suspense>
+        </body>
+
+      
     </html>
   );
 }

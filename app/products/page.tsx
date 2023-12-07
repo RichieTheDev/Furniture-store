@@ -13,7 +13,8 @@ const Allproducts = async () => {
   
   return (
     <div>
-      <Navbar />
+            <Navbar/>
+
       <Menu />
       <div className="px-3 sm:px-12">
         <Link

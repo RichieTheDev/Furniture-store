@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const ProductsCategory = async () => {
   return (
-    <div className="overflow-clip  clear-both px-4 sm:px-8 sm:pt-4">
+    <div className="overflow-clip  clear-both px-4 sm:px-12 sm:pt-4">
       <div>
         <div className="sm:mt-6 sm:float-left sm:w-1/2 ">
           <h1 className="h1header">Our Story</h1>
@@ -73,7 +73,7 @@ const ProductsCategory = async () => {
             height={250}
             className="menupic "
           />
-          <Link href='/products/lamp' className=" menu">
+          <Link href='/products/lamps' className=" menu">
             <span>Lamps</span>
             <span className=" underline underline-offset-4">View</span>
           </Link>

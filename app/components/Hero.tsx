@@ -1,14 +1,32 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { fetchProducts } from "./fetchproducts";
+import useStore from "@/store/store";
 
 const Hero = () => {
+  const [data, setData] = useState([]);
+
   const [nav, setNav] = useState<boolean>(false);
   const handleClick = () => {
     setNav(!nav);
   };
+  useEffect(() => {
+    const fetchData = async () => {
+      const productsData = await fetchProducts();
+      setData(productsData);
+    };
+
+    fetchData();
+  }, []); 
+  
+  const cart = useStore((state) => state.cart);
+  const cartCount = cart.reduce((total, cartItem) => {
+    const foundItem =data.find((item) => item._id === cartItem._id);
+    return total + (foundItem ? cartItem.quantity : 0);
+  }, 0);
   return (
     <div className="pt-1 px-3 sm:pt-4 sm:px-12 bg-hero bg-cover bg-center h-full w-full pb-4 text-black">
       <div className="flex items-center font-bold">
@@ -23,8 +41,7 @@ const Hero = () => {
         <div className="hidden sm:flex ml-auto space-x-6">
           <p>Search</p>
           <p>Account</p>
-          <p>Cart</p>
-        </div>
+          <Link href="/cart">Cart{cartCount}</Link>        </div>
       </div>
       {nav && (
         <ul

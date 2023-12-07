@@ -3,15 +3,22 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Menu from "../products/(menu)/Menu";
+import toast, { Toaster } from 'react-hot-toast';
+import useStore from "@/store/store";
+
 
 const ProductDetails = ({ table }: any) => {
   const [color, setColor] = useState("Black");
   const handleColor = (selectedColor: any) => {
     setColor(selectedColor);
   };
+  const add = useStore((state) => state.add);
+  const notify = () => toast.success('Added to Cart');
+
   return (
     <>
-      <Navbar />
+            <Navbar/>
+
       <Menu />
       <div className="mt-4 px-4 sm:px-12">
         <div className="flex flex-col sm:flex-row  gap-4">
@@ -28,21 +35,21 @@ const ProductDetails = ({ table }: any) => {
               alt=""
               width={250}
               height={250}
-              className="sm:w-[17vw] lg:w-[10vw] h-[10vh] rounded-md object-cover"
+              className="sm:w-[17vw] lg:w-[10vw] h-[10vh] w-[28vw] rounded-md object-cover"
             />
             <Image
               src={table.poster}
               alt=""
               width={250}
               height={250}
-              className="sm:w-[17vw] lg:w-[10vw] h-[10vh] rounded-md object-cover"
+              className="sm:w-[17vw] lg:w-[10vw] h-[10vh] w-[28vw] rounded-md object-cover"
             />
             <Image
               src={table.poster}
               alt=""
               width={250}
               height={250}
-              className="sm:w-[17vw] lg:w-[10vw] h-[10vh] rounded-md object-cover"
+              className="sm:w-[17vw] lg:w-[10vw] h-[10vh] w-[28vw] rounded-md object-cover"
             />
           </div>
           <div className="lg:w-[45vw]">
@@ -97,16 +104,18 @@ const ProductDetails = ({ table }: any) => {
               </div>
             </div>
             <div className="mt-4 flex flex-col ">
-              <strong className="text-lg sm:text-2xl">${table.price}</strong>
-            <button className="mt-4 sm:px-14 rounded-md text-white py-2 bg-black">
-              Add to cart{" "}
-              <span className="pl-4 space-x-4">
+              <strong className="text-xl sm:text-2xl">${table.price}</strong>
+              <button onClick={() => { add(table); notify(); }} className="mt-4 sm:px-14 rounded-md text-white py-2 bg-black">
+  Add to cart
+</button>
+<Toaster toastOptions={{success: {
+      duration: 2000,}}} />
+            {/* <span className="pl-4 space-x-4">
                 <span>|</span>
                 <span>+</span>
                 <span>1</span>
                 <span>-</span>
-              </span>
-            </button>
+              </span> */}
             </div>
           </div>
         </div>

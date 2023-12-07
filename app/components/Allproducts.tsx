@@ -11,7 +11,7 @@ const Allproducts = ({ furniture }: any) => {
   };
   return (
     <>
-      <Navbar />
+      <Navbar/>
       <Menu />
       <div className="mt-4 px-4 sm:px-12">
         <div className="flex flex-col sm:flex-row  gap-4">

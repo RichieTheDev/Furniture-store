@@ -4,13 +4,13 @@ import ProductsCategory from "./components/ProductsCategory";
 import Hero from "./components/Hero";
 const format = () => {
   return (
-    <div>
+    <>
       <Hero />
       <Suspense fallback={<p>Loading feed...</p>}>
         <Discover />
       </Suspense>
       <ProductsCategory />
-    </div>
+    </>
   );
 };
 

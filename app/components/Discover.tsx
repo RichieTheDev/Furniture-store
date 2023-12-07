@@ -64,7 +64,7 @@ const Discover = async () => {
           className="sm:w-[55%] w-screen px-4 sm:px-0 sm:float-right sm:pt-10 pt-4 lg:pt-20"
         >
           {/* Map over furniture data and create SplideSlide components */}
-          {furnitureData.slice(0, 3).map((item) => (
+          {furnitureData.slice(0, 14).map((item) => (
             <SplideSlide key={item._id}>
               <Image
                 src={item.poster}

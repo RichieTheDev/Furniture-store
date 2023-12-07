@@ -1,15 +1,30 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import useStore from "@/store/store";
+import {fetchProducts} from "../components/fetchproducts";
 
 const Navbar = () => {
-  const [nav, setNav] = useState<boolean>(false);
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const productsData = await fetchProducts();
+      setData(productsData);
+    };
+
+    fetchData();
+  }, []);  const [nav, setNav] = useState<boolean>(false);
   const handleClick = () => {
     setNav(!nav);
   };
+  const cart = useStore((state) => state.cart);
+  const cartCount = cart.reduce((total, cartItem) => {
+    const foundItem =data.find((item) => item._id === cartItem._id);
+    return total + (foundItem ? cartItem.quantity : 0);
+  }, 0);
   return (
     <div className="pt-1 px-3 sm:pt-4 sm:px-12 pb-4">
       <div className="flex items-center font-bold">
@@ -24,7 +39,7 @@ const Navbar = () => {
         <div className="hidden sm:flex ml-auto space-x-6">
           <p>Search</p>
           <p>Account</p>
-          <p>Cart</p>
+          <Link href="/cart">Cart{cartCount}</Link>
         </div>
       </div>
       {nav && (

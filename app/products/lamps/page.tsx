@@ -15,9 +15,10 @@ const Products = async ({ _id }: any) => {
 
   return (
     <div>
-      <Navbar />
+            <Navbar/>
+
       <Menu />
-      <div className="mt-4 px-3 sm:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="px-3 sm:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {table.map((product: any) => (
           <Link key={product._id} href={`/products/${product.slug}`} >
             <p >
