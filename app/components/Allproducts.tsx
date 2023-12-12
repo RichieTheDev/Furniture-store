@@ -100,12 +100,7 @@ const Allproducts = ({ furniture }: any) => {
               <strong className="text-lg sm:text-2xl">${furniture.price}</strong>
             <button className="mt-4 sm:px-14 rounded-md text-white py-2 bg-black">
               Add to cart{" "}
-              <span className="pl-4 space-x-4">
-                <span>|</span>
-                <span>+</span>
-                <span>1</span>
-                <span>-</span>
-              </span>
+              
             </button>
             </div>
           </div>

@@ -1,16 +1,16 @@
-'use client'
+"use client";
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { client } from "@/sanity/lib/client";
 import { groq } from "next-sanity";
 import Image from "next/image";
-import useStore from "@/store/store";
+import useStore, { CartItem, StoreState } from "@/store/store";
+import { MdDelete } from "react-icons/md";
 
 const CartPage = () => {
-  const [all, setAll] = useState([]);
-  const cart = useStore((state) => state.cart);
-  const add = useStore((state) => state.add);
-  const minus = useStore((state) => state.minus);
+  const [all, setAll] = useState<CartItem[]>([]);
+  const cart: CartItem[]  = useStore((state) => state.cart);
+  const removeItem = useStore((state) => state.removeItem);
 
   useEffect(() => {
     // Fetch table data from the Sanity CMS
@@ -30,33 +30,45 @@ const CartPage = () => {
   }, 0);
 
   return (
-    <div className="">
+    <div className=" pb-4">
       <Navbar />
-      <div className="px-4 sm:px-12">
-        <h1 className="h1header">Cart {cartCount}</h1>
+      <div className="px-4 sm:px-20">
+        <p className="flex flex-col sm:justify-between items-center">
+          <p className="h1header">MY BAG {cartCount}</p>
+          <p>Items are reserved for 60 minutes</p>
+        </p>
 
-        <div className="flex flex-col justify-center mx-auto items-center space-y-4">
-          {cart.map((item) => (
-            <div key={item._id} className="flex">
+        <div className="mt-4 flex flex-col space-y-4 px-2 sm:px-0">
+          {cart.map((item: CartItem) => (
+            <div key={item._id} className="flex ">
               <Image
                 src={item.poster}
                 alt={item.name}
                 width={250}
                 height={250}
-                className="sm:h-[70%] h-28 w-28 object-cover rounded-xl"
+                className="lg:h-48 lg:w-48 sm:h-36 sm:w-36 h-28 w-28 object-cover rounded-md"
               />
-              {/* <div className="flex flex-col sm:pt-10 lg:pt-20 ">
-                <p className="font-semibold text-3xl flex items-center truncate">
-                  <p>
-                    {item.name}
-                    <span className="flexprice" >${item.price}</span>
-                  </p>
+              <div className="flex flex-col pl-4">
+                <p className="flex">
+                  <p className="tex-xl sm:text-2xl font-semibold">${item.price}</p>
+                  <MdDelete onClick={(()=>removeItem(cart[0]._id))} size={25} className="ml-auto " />
                 </p>
-                
-                <button className="border px-4 py-2 border-white bg-black rounded-md text-white">
-                  Add
-                </button>
-              </div> */}
+                <p className="text-xl font-medium sm:text-3xl">{item.name}</p>
+                <p className="flex text-lg sm:text-xl font-medium italic">
+                  <p className="pr-2 3sm:pr-6">Black</p>
+                  
+
+                  <label  className="pr-1">
+                    QTY
+                  </label>
+                  <select >
+                    <option value="">1</option>
+                    <option value="">2</option>
+              
+                    <option value="">3</option>
+                  </select>
+                </p>
+              </div>
             </div>
           ))}
         </div>

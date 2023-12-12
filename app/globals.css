@@ -5,6 +5,9 @@
 .h1header{
     @apply text-4xl font-bold sm:text-5xl
 }
+.linklist{
+    @apply hover:text-amber-600 text-lg p-4
+}
 .flexname{
     @apply flex justify-center mx-auto font-semibold sm:text-base text-sm
 }
