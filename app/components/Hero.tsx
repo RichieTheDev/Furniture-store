@@ -1,10 +1,9 @@
 import Link from "next/link";
 import Navbar from "./Navbar";
 
-// Main Hero component
 const Hero = () => {
   return (
-    <div className=" bg-hero bg-cover bg-center h-full w-full pb-4 text-black">
+    <div className="bg-hero bg-cover bg-center h-full w-full pb-4 text-black">
       <Navbar />
       {/* Hero Content */}
       <div className="pt-10 px-4 sm:px-12 sm:pt-24 sm:relative">

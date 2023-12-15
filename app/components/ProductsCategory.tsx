@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-
 const ProductsCategory = async () => {
   return (
-    <div className="overflow-clip  clear-both px-4 sm:px-12 sm:pt-4">
+    <div className="overflow-clip clear-both px-4 sm:px-12 sm:pt-4">
       <div>
         <div className="sm:mt-6 sm:float-left sm:w-1/2 ">
           <h1 className="h1header">Our Story</h1>
@@ -13,7 +12,10 @@ const ProductsCategory = async () => {
             and home-objects. Our belief is that quality design <br />
             informs a quality of life.
           </p>
-          <Link href="/about" className=" font-semibold pt-6 underline underline-offset-4">
+          <Link
+            href="/about"
+            className="text-xl sm:text-3xl font-semibold pt-6 underline underline-offset-4"
+          >
             About Us
           </Link>
           <div className="pt-4 flex gap-4">
@@ -60,7 +62,7 @@ const ProductsCategory = async () => {
             height={250}
             className="menupic "
           />
-          <Link href='/products/table' className=" menu">
+          <Link href="/products/table" className="menu">
             <span>Table</span>
             <span className=" underline underline-offset-4">View</span>
           </Link>
@@ -71,11 +73,11 @@ const ProductsCategory = async () => {
             alt="img9"
             width={250}
             height={250}
-            className="menupic "
+            className="menupic"
           />
-          <Link href='/products/lamps' className=" menu">
+          <Link href="/products/lamps" className="menu">
             <span>Lamps</span>
-            <span className=" underline underline-offset-4">View</span>
+            <span className="underline underline-offset-4">View</span>
           </Link>
         </div>
         <div className="relative mt-6 sm:mt-0">
@@ -84,11 +86,11 @@ const ProductsCategory = async () => {
             alt="img9"
             width={250}
             height={250}
-            className="menupic "
+            className="menupic"
           />
           <p className=" menu">
             <span>Beds</span>
-            <span className=" underline underline-offset-4">View</span>
+            <span className="underline underline-offset-4">View</span>
           </p>
         </div>
       </div>

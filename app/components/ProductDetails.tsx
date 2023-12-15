@@ -6,6 +6,7 @@ import Menu from "../products/(menu)/Menu";
 import toast, { Toaster } from "react-hot-toast";
 import useStore from "@/store/store";
 
+
 const ProductDetails = ({ table }: any) => {
   const [color, setColor] = useState("Black");
   const handleColor = (selectedColor: any) => {

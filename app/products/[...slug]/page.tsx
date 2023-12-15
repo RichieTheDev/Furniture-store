@@ -1,21 +1,7 @@
-// Page.tsx
 import React from "react";
 import ProductDetails from "@/app/components/ProductDetails";
 import { client } from "@/sanity/lib/client";
-import Allproducts from "@/app/components/Allproducts";
-
-export interface idprops {
-  params: {
-    name: string;
-    slug: string;
-    image:string;
-    price:number;
-  };
-}
-export interface props {
-  name: string;
-  poster: string;
-}
+import { idprops, props } from "@/interfaces";
 
 async function getData(slug: string) {
   const query = `
@@ -31,17 +17,16 @@ async function getData(slug: string) {
   }
 `;
 
-
   const data = await client.fetch(query);
   return data;
 }
 
 const productPage = async ({ params }: idprops) => {
   const table: props = await getData(params.slug);
- 
+
   return (
     <div>
-      <ProductDetails table={table}  /> 
+      <ProductDetails table={table} />
     </div>
   );
 };

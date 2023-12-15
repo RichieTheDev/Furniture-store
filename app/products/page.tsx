@@ -10,13 +10,12 @@ const Allproducts = async () => {
   const furnitureData = await client.fetch(
     groq`*[_type=='furniture']{_id,name,price, "poster": poster.asset->url,"slug": slug.current}`,
   );
-  
+
   return (
     <div>
-            <Navbar/>
-
+      <Navbar />
       <Menu />
-      <div className="px-3 sm:px-12">
+      <div className="px-4 sm:px-12">
         <Link
           href={`/products/${furnitureData[14].slug}`}
           className="float-left"

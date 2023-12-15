@@ -7,7 +7,7 @@ import Link from "next/link";
 // @ts-ignore
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import { CartItem } from "@/store/store";
+import { CartItem } from "@/interfaces";
 
 const Footer = async() => {
     const furnitureData = await client.fetch(
@@ -80,7 +80,7 @@ const Footer = async() => {
       <div className="px-4 sm:px-8">
         <div className="flex flex-col sm:flex-row  sm:justify-between items-baseline mt-6">
           <div className="flex flex-col">
-            <h1 className="h1header">Hikli</h1>
+            <h1 className="h1header">Blimey</h1>
             <p className="text-lg sm:text-2xl font-semibold">
               We have provided clients around the world
               <br />

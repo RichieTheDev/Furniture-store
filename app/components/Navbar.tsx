@@ -5,10 +5,10 @@ import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import { CartItem } from "@/store/store";
 import { fetchproducts } from "./fetchproducts";
 import myStore from "@/store/store";
 import { UserButton, useUser } from "@clerk/nextjs";
+import { CartItem } from "@/interfaces";
 
 const Navbar = () => {
   // State for storing product data
@@ -51,7 +51,7 @@ const Navbar = () => {
           </button>
           {/* Brand link */}
           <Link href="/" className="text-4xl">
-            HIKLI
+            BLIMEY
           </Link>
         </div>
         {/* Desktop navigation links */}

@@ -4,12 +4,13 @@ import Navbar from "../components/Navbar";
 import { client } from "@/sanity/lib/client";
 import { groq } from "next-sanity";
 import Image from "next/image";
-import useStore, { CartItem, StoreState } from "@/store/store";
+import useStore from "@/store/store";
 import { MdDelete } from "react-icons/md";
+import { CartItem } from "@/interfaces";
 
 const CartPage = () => {
   const [all, setAll] = useState<CartItem[]>([]);
-  const cart: CartItem[]  = useStore((state) => state.cart);
+  const cart: CartItem[] = useStore((state) => state.cart);
   const removeItem = useStore((state) => state.removeItem);
 
   useEffect(() => {
@@ -50,21 +51,24 @@ const CartPage = () => {
               />
               <div className="flex flex-col pl-4">
                 <p className="flex">
-                  <p className="tex-xl sm:text-2xl font-semibold">${item.price}</p>
-                  <MdDelete onClick={(()=>removeItem(cart[0]._id))} size={25} className="ml-auto " />
+                  <p className="tex-xl sm:text-2xl font-semibold">
+                    ${item.price}
+                  </p>
+                  <MdDelete
+                    onClick={() => removeItem(cart[0]._id)}
+                    size={25}
+                    className="ml-auto pl-48  "
+                  />
                 </p>
-                <p className="text-xl font-medium sm:text-3xl">{item.name}</p>
+                <p className="text-xl   sm:text-3xl">{item.name}</p>
                 <p className="flex text-lg sm:text-xl font-medium italic">
                   <p className="pr-2 3sm:pr-6">Black</p>
-                  
 
-                  <label  className="pr-1">
-                    QTY
-                  </label>
-                  <select >
+                  <label className="pr-1">QTY</label>
+                  <select>
                     <option value="">1</option>
                     <option value="">2</option>
-              
+
                     <option value="">3</option>
                   </select>
                 </p>

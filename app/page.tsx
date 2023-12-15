@@ -6,10 +6,10 @@ const format = () => {
   return (
     <>
       <Hero />
-      <Suspense fallback={<p>Loading feed...</p>}>
-        <Discover />
-      </Suspense>
       <ProductsCategory />
+      <Suspense fallback={<p>Loading, Please wait...</p>}>
+        <Discover />
+      </Suspense>      
     </>
   );
 };

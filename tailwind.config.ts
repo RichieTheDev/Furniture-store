@@ -11,6 +11,7 @@ const config: Config = {
       hero: "url('../public/img11.jpg')",
     },
   },
+  darkMode: 'class',
   plugins: [],
 };
 export default config;

@@ -1,22 +1,6 @@
+import { StoreState } from "@/interfaces";
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-
-export interface CartItem {
-  _id: string;
-  name: string;
-  price: number;
-  quantity: number;
-  poster: string;
-  slug: string;
-}
-
-export interface StoreState {
-  cart: CartItem[];
-  add: (item: CartItem) => void;
-  minus: (item: CartItem) => void;
-  removeItem: (itemId: string) => void;
-  clear: () => void;
-}
 
 const myStore = create<StoreState>()(
   persist(
