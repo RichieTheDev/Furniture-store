@@ -5,6 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import Footer from "./components/Footer";
 import { Suspense } from "react";
 import { Providers } from "./providers";
+import Loading from "./loading";
 
 const lexend = Nunito_Sans({
   weight: ["400", "500", "600", "700", "900"],
@@ -25,15 +26,14 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <body className={lexend.className}>
-          <main className="dark:bg-slate-900">
-          <Providers>
-          {children}
-          <Suspense fallback={<p>Loading...</p>}>
-            <Footer />
-          </Suspense>
-          </Providers>
+          <main className="dark:bg-black dark:text-white">
+            <Providers>
+              {children}
+              <Suspense fallback={<Loading />}>
+                <Footer />
+              </Suspense>
+            </Providers>
           </main>
-         
         </body>
       </html>
     </ClerkProvider>

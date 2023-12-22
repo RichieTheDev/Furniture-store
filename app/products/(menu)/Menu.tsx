@@ -22,12 +22,6 @@ const Menu = () => {
           Lamps
         </Link>
         <Link
-          href="/products/chairs"
-          className="hover:text-amber-500 cursor-pointer"
-        >
-          Chairs
-        </Link>
-        <Link
           href="/products/shelves"
           className="hover:text-amber-500 cursor-pointer"
         >
@@ -38,6 +32,12 @@ const Menu = () => {
           className="hover:text-amber-500 cursor-pointer"
         >
           Kitchen
+        </Link>
+        <Link
+          href="/products/chair"
+          className="hover:text-amber-500 cursor-pointer"
+        >
+          Chairs
         </Link>
       </div>
     </div>

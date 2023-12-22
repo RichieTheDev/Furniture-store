@@ -9,6 +9,7 @@ import { fetchproducts } from "./fetchproducts";
 import myStore from "@/store/store";
 import { UserButton, useUser } from "@clerk/nextjs";
 import { CartItem } from "@/interfaces";
+import ThemeSwitch from "./ThemeSwitch";
 
 const Navbar = () => {
   // State for storing product data
@@ -50,9 +51,12 @@ const Navbar = () => {
             {nav ? <AiOutlineClose size={35} /> : <AiOutlineMenu size={35} />}
           </button>
           {/* Brand link */}
-          <Link href="/" className="text-4xl">
-            BLIMEY
-          </Link>
+          <p className="flex items-center space-x-4">
+            <Link href="/" className="text-4xl">
+              BLIMEY
+            </Link>
+            <ThemeSwitch />
+          </p>
         </div>
         {/* Desktop navigation links */}
         <div className="hidden sm:flex ml-auto items-center space-x-6">
@@ -87,7 +91,7 @@ const Navbar = () => {
       {nav && (
         <ul
           onClick={handleClick}
-          className="fixed left-0 top-0 w-full z-10 h-screen text-white bg-black font-medium items-center text-center ease-in-out duration-500 overflow-hidden"
+          className="fixed left-0 top-0 w-full z-10 h-screen text-black bg-white dark:text-white dark:bg-black font-medium items-center text-center ease-in-out duration-500 overflow-hidden"
         >
           {/* Close Button for mobile navigation menu */}
           <AiOutlineClose

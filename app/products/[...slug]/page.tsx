@@ -6,7 +6,7 @@ import { idprops, props } from "@/interfaces";
 async function getData(slug: string) {
   const query = `
   *[
-    (_type=='table' || _type=='furniture' || _type=='lamp') &&
+    (_type=='table' || _type=='furniture' || _type=='lamp'|| _type=='seats'|| _type=='kitchen'|| _type=='shelve') &&
     slug.current == "${slug}"
   ][0]{
     _id,

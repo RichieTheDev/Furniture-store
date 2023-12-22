@@ -6,7 +6,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       name: "furniture",
       title: "Furniture",
       type: "document",
-    
+
       fields: [
         {
           name: "name",
@@ -14,20 +14,19 @@ export const schema: { types: SchemaTypeDefinition[] } = {
           title: "Name",
         },
         {
-          title: 'Slug',
-          name: 'slug',
-          type: 'slug',
+          title: "Slug",
+          name: "slug",
+          type: "slug",
           options: {
-            source: 'name',
+            source: "name",
             maxLength: 200, // will be ignored if slugify is set
-            
-          }
+          },
         },
         {
           name: "poster",
           type: "image",
           options: {
-            hotspot: true // <-- Defaults to false
+            hotspot: true, // <-- Defaults to false
           },
           title: "Poster", // Added title for the 'poster' field
         },
@@ -43,30 +42,28 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       title: "Lamp",
       type: "document",
       options: {
-        hotspot: true // <-- Defaults to false
+        hotspot: true, // <-- Defaults to false
       },
       fields: [
         {
           name: "name",
           type: "string",
           title: "Name",
-          
         },
         {
-          title: 'Slug',
-          name: 'slug',
-          type: 'slug',
+          title: "Slug",
+          name: "slug",
+          type: "slug",
           options: {
-            source: 'name',
+            source: "name",
             maxLength: 200, // will be ignored if slugify is set
-   
-          }
+          },
         },
         {
           name: "poster",
           type: "image",
           options: {
-            hotspot: true // <-- Defaults to false
+            hotspot: true, // <-- Defaults to false
           },
           title: "Poster", // Added title for the 'poster' field
         },
@@ -82,30 +79,139 @@ export const schema: { types: SchemaTypeDefinition[] } = {
       title: "Table",
       type: "document",
       options: {
-        hotspot: true // <-- Defaults to false
+        hotspot: true, // <-- Defaults to false
       },
       fields: [
         {
           name: "name",
           type: "string",
           title: "Name",
-          
         },
         {
-          title: 'Slug',
-          name: 'slug',
-          type: 'slug',
+          title: "Slug",
+          name: "slug",
+          type: "slug",
           options: {
-            source: 'name',
+            source: "name",
             maxLength: 200, // will be ignored if slugify is set
-   
-          }
+          },
         },
         {
           name: "poster",
           type: "image",
           options: {
-            hotspot: true // <-- Defaults to false
+            hotspot: true, // <-- Defaults to false
+          },
+          title: "Poster", // Added title for the 'poster' field
+        },
+        {
+          name: "price",
+          type: "number",
+          title: "Price",
+        },
+      ],
+    },
+    {
+      name: "shelve",
+      title: "Shelves",
+      type: "document",
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
+      fields: [
+        {
+          name: "name",
+          type: "string",
+          title: "Name",
+        },
+        {
+          title: "Slug",
+          name: "slug",
+          type: "slug",
+          options: {
+            source: "name",
+            maxLength: 200, // will be ignored if slugify is set
+          },
+        },
+        {
+          name: "poster",
+          type: "image",
+          options: {
+            hotspot: true, // <-- Defaults to false
+          },
+          title: "Poster", // Added title for the 'poster' field
+        },
+        {
+          name: "price",
+          type: "number",
+          title: "Price",
+        },
+      ],
+    },
+    {
+      name: "kitchen",
+      title: "Kitchen",
+      type: "document",
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
+      fields: [
+        {
+          name: "name",
+          type: "string",
+          title: "Name",
+        },
+        {
+          title: "Slug",
+          name: "slug",
+          type: "slug",
+          options: {
+            source: "name",
+            maxLength: 200, // will be ignored if slugify is set
+          },
+        },
+        {
+          name: "poster",
+          type: "image",
+          options: {
+            hotspot: true, // <-- Defaults to false
+          },
+          title: "Poster", // Added title for the 'poster' field
+        },
+        {
+          name: "price",
+          type: "number",
+          title: "Price",
+        },
+      ],
+    },
+    {
+      name: "seats",
+      title: "Seat",
+      type: "document",
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
+      fields: [
+        {
+          name: "name",
+          type: "string",
+          title: "Name",
+        },
+        {
+          title: "Slug",
+          name: "slug",
+          type: "slug",
+          options: {
+            source: "name",
+            maxLength: 200, // will be ignored if slugify is set
+          },
+        },
+        {
+          name: "poster",
+          type: "image",
+          options: {
+            hotspot: true, // <-- Defaults to false
           },
           title: "Poster", // Added title for the 'poster' field
         },

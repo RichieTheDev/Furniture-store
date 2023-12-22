@@ -11,7 +11,7 @@ const Allproducts = ({ furniture }: any) => {
   };
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <Menu />
       <div className="mt-4 px-4 sm:px-12">
         <div className="flex flex-col sm:flex-row  gap-4">
@@ -62,7 +62,7 @@ const Allproducts = ({ furniture }: any) => {
             <p className="border-t border-gray-400 mt-3 mb-3"></p>
             <strong>Specifications: {color}</strong>
             <p className="border-t border-gray-400 mt-3"></p>
-            <div className="flex space-x-4">
+            <div className="flex items-baseline space-x-4 mt-3">
               <div className="space-x-2">
                 <input
                   type="radio"
@@ -97,11 +97,12 @@ const Allproducts = ({ furniture }: any) => {
               </div>
             </div>
             <div className="mt-4 flex flex-col ">
-              <strong className="text-lg sm:text-2xl">${furniture.price}</strong>
-            <button className="mt-4 sm:px-14 rounded-md text-white py-2 bg-black">
-              Add to cart{" "}
-              
-            </button>
+              <strong className="text-lg sm:text-2xl">
+                ${furniture.price}
+              </strong>
+              <button className="mt-4 sm:px-14 rounded-md text-white py-2 bg-black">
+                Add to cart{" "}
+              </button>
             </div>
           </div>
         </div>

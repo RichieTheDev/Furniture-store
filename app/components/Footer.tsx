@@ -90,25 +90,25 @@ const Footer = async() => {
             </p>
           </div>
           <div className="flex mx-auto flex-col space-y-4 items-baseline text-lg font-semibold">
-            <Link href="/">Home</Link>
-            <Link href="/products">Products</Link>
-            <p>Lookbook</p>
-            <Link href="/about">About Us</Link>
-            <p>Contact</p>
+            <Link href="/" className="hover:text-amber-500">Home</Link>
+            <Link href="/products" className="hover:text-amber-500">Products</Link>
+            <p className="hover:text-amber-500">Lookbook</p>
+            <Link href="/about" className="hover:text-amber-500">About Us</Link>
+            <p className="hover:text-amber-500">Contact</p>
           </div>
           <div className="hidden sm:flex mx-auto  flex-col space-y-4 items-baseline text-lg  font-semibold">
-            <p>Subscribe</p>
-            <p>Support</p>
+            <p className="hover:text-amber-500">Subscribe</p>
+            <p className="hover:text-amber-500">Support</p>
           </div>
           <div className="hidden lg:flex  mx-auto  flex-col space-y-4 items-baseline text-lg  font-semibold">
-            <p>Twitter</p>
-            <p>Instagram</p>
+            <p className="hover:text-amber-500">Twitter</p>
+            <p className="hover:text-amber-500">Instagram</p>
           </div>
         </div>
       </div>
       <div className="w-[95%] mt-10  mx-auto border-t border-gray-900"></div>
       <p className="flex justify-center mx-auto font-semibold pb-6">
-        2023 HIKLI. All Rights Reserved
+        2023 Blimey. All Rights Reserved
       </p>
     </>
   );

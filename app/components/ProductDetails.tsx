@@ -6,7 +6,6 @@ import Menu from "../products/(menu)/Menu";
 import toast, { Toaster } from "react-hot-toast";
 import useStore from "@/store/store";
 
-
 const ProductDetails = ({ table }: any) => {
   const [color, setColor] = useState("Black");
   const handleColor = (selectedColor: any) => {
@@ -68,7 +67,7 @@ const ProductDetails = ({ table }: any) => {
             <p className="border-t border-gray-400 mt-3 mb-3"></p>
             <strong>Specifications: {color}</strong>
             <p className="border-t border-gray-400 mt-3"></p>
-            <div className="flex space-x-4">
+            <div className="flex items-baseline mt-3 space-x-4">
               <div className="space-x-2">
                 <input
                   type="radio"
@@ -109,7 +108,7 @@ const ProductDetails = ({ table }: any) => {
                   add(table);
                   notify();
                 }}
-                className="mt-4 sm:px-14 rounded-md text-white py-2 bg-black"
+                className="mt-4 sm:px-14 rounded-md text-white py-2 bg-black dark:bg-white dark:text-black"
               >
                 Add to cart
               </button>
