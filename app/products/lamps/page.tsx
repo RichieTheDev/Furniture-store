@@ -3,7 +3,7 @@ import { client } from "@/sanity/lib/client";
 import { groq } from "next-sanity";
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/app/components/Navbar";
+import Navbar from "@/app/(components)/Navbar";
 import Menu from "../(menu)/Menu";
 import { CartItem } from "@/interfaces";
 

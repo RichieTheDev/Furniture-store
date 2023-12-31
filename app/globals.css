@@ -2,33 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-.h1header{
-    @apply text-4xl font-bold sm:text-5xl
+.h1header {
+  @apply text-4xl font-bold sm:text-5xl;
 }
-.linklist{
-    @apply hover:text-amber-600 text-lg p-4
+.linklist {
+  @apply hover:text-amber-600 text-lg p-4;
 }
-.flexname{
-    @apply flex justify-center mx-auto font-semibold sm:text-base text-sm
+.flexname {
+  @apply flex justify-center mx-auto font-semibold sm:text-base text-sm;
 }
-.flexprice{
-    @apply flex justify-center mx-auto font-bold sm:text-sm text-xs
+.flexprice {
+  @apply flex justify-center mx-auto font-bold sm:text-sm text-xs;
 }
-.griditems{
-    @apply w-[35vw] sm:w-[35vw] lg:h-[65vh] object-cover rounded-lg 
+.griditems {
+  @apply w-[35vw] sm:w-[35vw] lg:h-[65vh] object-cover rounded-lg;
 }
-.gridotheritems{
-    @apply rounded-lg object-cover w-[25vw] sm:w-[23vw] sm:h-[30vh] lg:w-[25vw] lg:h-[50vh]
-}   
-.bigimage{
-    @apply object-cover rounded-lg w-screen h-[30vh] sm:w-screen sm:h-[35vh] lg:w-[45vw] lg:h-[50vh] xl:h-[75vh] xl:w-[40vw]
+.gridotheritems {
+  @apply rounded-lg object-cover w-[25vw] sm:w-[23vw] sm:h-[30vh] lg:w-[25vw] lg:h-[50vh];
 }
-.smallimage{
-    @apply rounded-lg object-cover w-[50vw] lg:w-[21vw] h-[20vh] sm:h-[30vh] lg:h-[45vh]
+.bigimage {
+  @apply object-cover rounded-lg w-screen h-[30vh] sm:w-screen  sm:h-[35vh] lg:w-[45vw] lg:h-[50vh] xl:h-[75vh] xl:w-[40vw];
 }
-.menu{
-    @apply backdrop-blur-2xl bg-white/30 absolute bottom-10 right-4  sm:bottom-20 lg:bottom-36 sm:-right-14 p-8 sm:p-10 flex flex-col items-center font-bold
+.smallimage {
+  @apply rounded-lg object-cover w-[50vw] lg:w-[21vw] h-[20vh] sm:h-[30vh] lg:h-[45vh];
 }
-.menupic{
-    @apply h-60 w-[76vw] sm:w-[36vw] lg:w-full sm:h-[95%]  object-cover rounded-lg
+.menu {
+  @apply backdrop-blur-2xl bg-white/30 absolute bottom-10 right-4  sm:bottom-20 lg:bottom-36 sm:-right-14 p-8 sm:p-10 flex flex-col items-center font-bold;
+}
+.menupic {
+  @apply h-60 w-[76vw] sm:w-[36vw] lg:w-full sm:h-[95%]  object-cover rounded-lg;
 }

@@ -3,7 +3,7 @@ import { client } from "@/sanity/lib/client";
 import { groq } from "next-sanity";
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/app/components/Navbar";
+import Navbar from "@/app/(components)/Navbar";
 import Menu from "../(menu)/Menu";
 import { CartItem } from "@/interfaces";
 
@@ -19,16 +19,16 @@ const ChairProducts = async () => {
       <Menu />
       <div className="px-3 sm:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {chair.map((product: CartItem) => (
-          <Link key={product._id} href={`/products/${product.slug}`}>          
-              <Image
-                src={product.poster}
-                width={350}
-                height={300}
-                alt={product.name}
-                className="bigimage"
-              />
-              <p className="flexname">{product.name}</p>
-              <p className="flexprice">${product.price}</p>          
+          <Link key={product._id} href={`/products/${product.slug}`}>
+            <Image
+              src={product.poster}
+              width={350}
+              height={300}
+              alt={product.name}
+              className="bigimage"
+            />
+            <p className="flexname">{product.name}</p>
+            <p className="flexprice">${product.price}</p>
           </Link>
         ))}
       </div>

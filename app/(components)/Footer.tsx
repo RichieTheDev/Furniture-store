@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { groq } from "next-sanity";
 import { client } from "@/sanity/lib/client";
 import Image from "next/image";
@@ -9,16 +9,19 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { CartItem } from "@/interfaces";
 
-const Footer = async() => {
-    const furnitureData = await client.fetch(
+const Footer = async () => {
+  const furnitureData = await client.fetch(
     groq`*[_type=='furniture']{_id,name,price,"slug": slug.current, "poster": poster.asset->url}`,
   );
 
   return (
-    <>
+    <footer>
       <div className="sm:px-12 px-4 pt-6 clear-both">
         <div>
-          <h1 className="h1header">Featured Products</h1>
+          <h1 data-testId="footer-title" className="h1header">
+            Featured Products
+          </h1>
+
           <Splide
             options={{
               pagination: false,
@@ -43,7 +46,7 @@ const Footer = async() => {
             className="pt-4"
           >
             {/* Map over furniture data and create SplideSlide components */}
-            {furnitureData.slice(0, 14).map((item:CartItem) => (
+            {furnitureData.slice(0, 14).map((item: CartItem) => (
               <SplideSlide key={item._id}>
                 <Link href={`/products/${item.slug}`}>
                   <Image
@@ -61,7 +64,7 @@ const Footer = async() => {
           </Splide>
         </div>
         <div className="sm:text-right">
-          <h1 className="h1header">
+          <h1 data-testid="footer-header" className="h1header">
             Subscribe To Our
             <br />
             NewsLetter
@@ -90,10 +93,16 @@ const Footer = async() => {
             </p>
           </div>
           <div className="flex mx-auto flex-col space-y-4 items-baseline text-lg font-semibold">
-            <Link href="/" className="hover:text-amber-500">Home</Link>
-            <Link href="/products" className="hover:text-amber-500">Products</Link>
+            <Link href="/" className="hover:text-amber-500">
+              Home
+            </Link>
+            <Link href="/products" className="hover:text-amber-500">
+              Products
+            </Link>
             <p className="hover:text-amber-500">Lookbook</p>
-            <Link href="/about" className="hover:text-amber-500">About Us</Link>
+            <Link href="/about" className="hover:text-amber-500">
+              About Us
+            </Link>
             <p className="hover:text-amber-500">Contact</p>
           </div>
           <div className="hidden sm:flex mx-auto  flex-col space-y-4 items-baseline text-lg  font-semibold">
@@ -110,7 +119,7 @@ const Footer = async() => {
       <p className="flex justify-center mx-auto font-semibold pb-6">
         2023 Blimey. All Rights Reserved
       </p>
-    </>
+    </footer>
   );
 };
 

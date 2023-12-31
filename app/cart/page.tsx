@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../(components)/Navbar";
 import { client } from "@/sanity/lib/client";
 import { groq } from "next-sanity";
 import Image from "next/image";
@@ -76,7 +76,7 @@ const CartPage = () => {
   return (
     <div className="pb-4">
       <Navbar />
-      <div className="px-4 sm:px-20">
+      <div className="px-4 sm:px-14 lg:px-20">
         <p className="flex flex-col sm:justify-between items-center">
           <p className="h1header">MY BAG {cartCount}</p>
           <p>Items are reserved for 60 minutes</p>
@@ -115,15 +115,14 @@ const CartPage = () => {
                     <MdDelete
                       onClick={() => removeItem(cart[0]._id)}
                       size={25}
-                      className="absolute left-[18rem] sm:left-[30rem] lg:left-[32rem]"
+                      className="absolute left-[18rem] sm:left-[30rem] md:left-[25rem] lg:left-[32rem]"
                     />
                   </p>
                   <p className="text-lg">{item.name}</p>
                   <div className="flex items-center space-x-3">
                     <button
-                      className={`p-2 rounded bg-yellow-${
-                        item.quantity < 2 ? "200" : "400"
-                      } text-yellow-50`}
+                      className="p-2 text-yellow-50 rounded bg-yellow-
+                        500"
                       onClick={() => minus(item)}
                     >
                       <HiMinusSm size={25} />

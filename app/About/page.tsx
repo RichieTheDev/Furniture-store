@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../(components)/Navbar";
 import Image from "next/image";
 import { groq } from "next-sanity";
 import { client } from "@/sanity/lib/client";
@@ -13,7 +13,10 @@ const About = async () => {
     <>
       <Navbar />
       <div className="px-3 sm:px-12">
-        <h1 className="text-4xl font-bold sm:text-5xl text-center mt-4 ">
+        <h1
+          data-testId="about-title"
+          className="text-4xl font-bold sm:text-5xl text-center mt-4 "
+        >
           About Us
         </h1>
         <p className="text-lg sm:text-right text-justify font-semibold mt-2">
@@ -54,7 +57,10 @@ const About = async () => {
           />
         </div>
         <div className="pt-4">
-          <h1 className="text-4xl font-bold sm:text-5xl  mt-4">
+          <h1
+            data-testid="header"
+            className="text-4xl font-bold sm:text-5xl  mt-4"
+          >
             Exceptional <br />
             Savoir
           </h1>

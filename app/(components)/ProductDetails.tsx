@@ -25,7 +25,7 @@ const ProductDetails = ({ table }: any) => {
             alt=""
             width={350}
             height={350}
-            className="sm:w-[35vw] lg:w-[45vw] h-[35vh] w-screen lg:h-[50vh] sm:h-[45vh] rounded-lg object-cover"
+            className="sm:w-[35vw] lg:w-[45vw] h-[35vh] w-screen lg:h-[50vh] sm:h-[40vh] rounded-lg object-cover"
           />
           <div className="flex flex-row sm:flex-col sm:space-x-0 space-x-4 sm:space-y-4">
             <Image

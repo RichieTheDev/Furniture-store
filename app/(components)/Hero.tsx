@@ -7,7 +7,9 @@ const Hero = () => {
       <Navbar />
       {/* Hero Content */}
       <div className="pt-10 px-4 sm:px-12 sm:pt-24 sm:relative">
-        <h1 className="text-7xl sm:text-8xl">Comfort</h1>
+        <h1 data-testId="hero-title" className="text-7xl sm:text-8xl">
+          Comfort
+        </h1>
         <h1 className="text-5xl sm:text-8xl">In Furniture</h1>
         <p className="font-semibold pt-10 sm:pt-6 text-xl">
           See our thoughtfully curated collection of Furniture, lighting, and

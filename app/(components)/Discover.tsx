@@ -21,7 +21,10 @@ const Discover = async () => {
       <div className="h-full">
         {/* Left content */}
         <div className="sm:w-[45%] pl-4 pt-8 sm:pl-8 lg:pl-12 sm:pt-24 lg:pt-28 sm:float-left">
-          <h1 className="sm:text-4xl text-3xl font-bold">
+          <h1
+            data-testId="discover-title"
+            className="sm:text-4xl text-3xl font-bold"
+          >
             Discover Our
             <br />
             Featured Products

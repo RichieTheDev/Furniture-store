@@ -1,5 +1,5 @@
 import React from "react";
-import ProductDetails from "@/app/components/ProductDetails";
+import ProductDetails from "@/app/(components)/ProductDetails";
 import { client } from "@/sanity/lib/client";
 import { idprops, props } from "@/interfaces";
 

@@ -9,6 +9,7 @@ Welcome to **Blimey**, a modern and feature-rich Furniture e-commerce platform b
 ## Features
 
 - **Clerk Authentication:** Secure and user-friendly authentication powered by [@clerk/nextjs](https://github.com/clerkinc/nextjs).
+- **Cypress:** end to end testing [@cypress](https://www.cypress.io/)
 - **Themes:** Customize the look and feel of the app with ease using [@clerk/themes](https://github.com/clerkinc/themes).
 - **Image Handling:** Utilize [@sanity/image-url](https://www.sanity.io/docs/image-url) for efficient image handling.
 - **Sanity Content Studio:** Manage your content effortlessly with [@sanity/vision](https://www.sanity.io/docs/vision).

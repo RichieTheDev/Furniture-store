@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
-import Footer from "./components/Footer";
+import Footer from "./(components)/Footer";
 import { Suspense } from "react";
 import { Providers } from "./providers";
 import Loading from "./loading";
